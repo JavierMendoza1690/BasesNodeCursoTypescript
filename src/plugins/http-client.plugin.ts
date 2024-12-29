@@ -14,12 +14,12 @@ export const httpClientPlugin = {
   },
 
   post: async (url: any, body: any) => {
-    /* TODO: */
+    throw new Error("Method not implemented.");
   },
   put: async (url: any, body: any) => {
-    /* TODO: */
+    throw new Error("Method not implemented.");
   },
   delete: async (url: any, body: any) => {
-    /* TODO: */
+    throw new Error("Method not implemented.");
   },
 };

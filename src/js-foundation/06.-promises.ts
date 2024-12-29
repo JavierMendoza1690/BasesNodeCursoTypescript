@@ -16,10 +16,12 @@ export const getPokemonById = async (id: string|number, callback?: Function):Pro
     //  throw new Error('Pokemon no existe') // simulando error
      
      //* Metodo 3: peticion http con arquitectura de plugins (patron adaptador)
-     const pokemon = await httpClient.get(url); //solicitud con axios
-
-
-
-    return pokemon.name;
-
+     try {
+         const pokemon = await httpClient.get(url); //solicitud con axios
+         return pokemon.name;
+         
+        } catch (error) {
+            throw `Pokemon not found with id ${id}`
+        }
+        
 }
